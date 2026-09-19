@@ -1,9 +1,7 @@
 package com.mm_projects.InventoryManagementSystem.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-
 import java.util.List;
 
 
@@ -20,7 +18,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is required")
     private String name;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)

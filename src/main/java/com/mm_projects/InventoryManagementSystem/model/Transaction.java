@@ -1,6 +1,5 @@
 package com.mm_projects.InventoryManagementSystem.model;
 
-
 import com.mm_projects.InventoryManagementSystem.enums.TransactionStatus;
 import com.mm_projects.InventoryManagementSystem.enums.TransactionType;
 import jakarta.persistence.*;
@@ -33,6 +32,7 @@ public class Transaction {
     private TransactionStatus status;
 
     private String description;
+
     private String note;
 
     private final LocalDateTime createdAt = LocalDateTime.now();

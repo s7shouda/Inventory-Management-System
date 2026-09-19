@@ -1,9 +1,7 @@
 package com.mm_projects.InventoryManagementSystem.model;
 
-
 import com.mm_projects.InventoryManagementSystem.enums.UserRole;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -22,17 +20,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is required")
     private String name;
 
     @Column(unique = true)
-    @NotBlank(message = "Email is required")
     private String email;
 
-    @NotBlank(message = "Password is required")
     private String password;
 
-    @NotBlank(message = "Phone number is required")
     @Column(name = "phone_number")
     private String phoneNumber;
 
