@@ -16,9 +16,13 @@ public class ModelMapperConfig {
 
         ModelMapper modelMapper = new ModelMapper();
 
+        // telling model mapper to pring it's configurations to edit it
         modelMapper.getConfiguration()
+                //enable matching between same field names between two classes
                 .setFieldMatchingEnabled(true)
+                // allow modelMapper to access private fields in the classes he worked with
                 .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE)
+                //specifying STANDARD level of matching between fields
                 .setMatchingStrategy(MatchingStrategies.STANDARD);
 
         return modelMapper;
